@@ -8,3 +8,7 @@ Use usbmuxd and libimobiledevice to communicate with iOS application
 
 ### libimobiledevice
 - For .Net packages/instructions see [imobiledevice-net](https://github.com/libimobiledevice-win32/imobiledevice-net) on Github
+
+
+### iOS Application
+- Any application that is listening for a `tcp` connection on the same `port` as this script
