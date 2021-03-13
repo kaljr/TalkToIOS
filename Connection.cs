@@ -18,6 +18,7 @@ namespace TalkToIOS
         private static string deviceName;
         private static iDeviceConnectionHandle connectionHandle;
         private static bool receivingMessages = false;
+        private static iDeviceEventCallBack eventCallback = EventCallback;
 
         public static void Initialize()
         {
@@ -29,7 +30,7 @@ namespace TalkToIOS
             idevice = LibiMobileDevice.Instance.iDevice;
             lockdown = LibiMobileDevice.Instance.Lockdown;
 
-            iDeviceEventCallBack eventCallback = EventCallback;
+            
             iDeviceError iDeviceError = idevice.idevice_event_subscribe(EventCallback, new IntPtr());
 
             Console.WriteLine("Listening for connections:");
